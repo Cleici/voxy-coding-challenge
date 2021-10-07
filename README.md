@@ -73,7 +73,7 @@ Now, with everything installed, simply go to your IDE terminal and run the comma
 
 ## Why the test cases were chosen
 
-The following test cases were chosen (all five are being detailed here as the instructions weren't very clear if only the automated tests should be explained or all the test cases)
+The following test cases were chosen (all five are being detailed here as the instructions weren't very clear if only the automated tests should be explained or all the test cases).
 
 **Scenario 01: Invalid email verification** -
 This was chosen first because it is critical for the user to have a feedback on whether or not the input is valid. For example, if the user has more than one email, and accidentally uses one that does not have an account in the Voxy platform, how will they be informed of that? It is necessary first and foremost to validate this.
