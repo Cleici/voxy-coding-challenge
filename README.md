@@ -31,7 +31,7 @@ This document will guide the user on how to run the automated tests for the Voxy
 
 Go to https://www.python.org/downloads/
 Click "download" on the latest version listed
-Download said version, according to your SO.
+Download said version, according to your OS.
 
 ### Robot Framework
 
