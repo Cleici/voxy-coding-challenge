@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.8.4 on win32)" generated="20211007 12:20:29.404" rpa="false" schemaversion="2">
+<suite id="s1" name="Login" source="C:\Users\cleic\github\voxy-coding-challenge\test_suite\login.robot">
+<test id="s1-t1" name="Scenario 01: Invalid email verification">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211007 12:20:29.743" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211007 12:20:29.746" level="INFO">Firefox driver log is always forced to to: C:\Users\cleic\github\voxy-coding-challenge\results\geckodriver-29.log</msg>
+<status status="PASS" starttime="20211007 12:20:29.743" endtime="20211007 12:20:36.632"/>
+</kw>
+<kw name="Fill in the field &quot;email&quot; with a non-existing email account" library="login_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211007 12:20:36.639" level="INFO">Opening url 'https://web-stage.voxy.com/v2/#/login/'</msg>
+<status status="PASS" starttime="20211007 12:20:36.638" endtime="20211007 12:20:45.293"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="login_form_email_input_field"]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211007 12:20:45.294" level="INFO">Typing text 'gibberish@gmail.com' into text field 'xpath=//*[@id="login_form_email_input_field"]'.</msg>
+<status status="PASS" starttime="20211007 12:20:45.293" endtime="20211007 12:20:45.402"/>
+</kw>
+<status status="PASS" starttime="20211007 12:20:36.637" endtime="20211007 12:20:45.402"/>
+</kw>
+<kw name="Click the button &quot;Continue&quot;" library="login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="login_form_submit_button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211007 12:20:45.405" level="INFO">Clicking button 'xpath=//*[@id="login_form_submit_button"]'.</msg>
+<status status="PASS" starttime="20211007 12:20:45.405" endtime="20211007 12:20:45.932"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211007 12:20:45.933" endtime="20211007 12:20:45.934"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="modals-container"]/div/div/div[2]/div</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211007 12:20:45.934" endtime="20211007 12:20:49.243"/>
+</kw>
+<status status="PASS" starttime="20211007 12:20:45.404" endtime="20211007 12:20:49.243"/>
+</kw>
+<kw name="Click &quot;Try again&quot;" library="login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="modals-container"]/div//div[2]//div[2]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211007 12:20:49.245" level="INFO">Clicking button 'xpath=//*[@id="modals-container"]/div//div[2]//div[2]/button'.</msg>
+<status status="PASS" starttime="20211007 12:20:49.244" endtime="20211007 12:20:54.572"/>
+</kw>
+<status status="PASS" starttime="20211007 12:20:49.244" endtime="20211007 12:20:54.573"/>
+</kw>
+<status status="PASS" starttime="20211007 12:20:29.741" endtime="20211007 12:20:54.575"/>
+</test>
+<test id="s1-t2" name="Scenario 02: Invalid number verification">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211007 12:20:54.582" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20211007 12:20:54.591" level="INFO">Firefox driver log is always forced to to: C:\Users\cleic\github\voxy-coding-challenge\results\geckodriver-30.log</msg>
+<status status="PASS" starttime="20211007 12:20:54.581" endtime="20211007 12:21:01.423"/>
+</kw>
+<kw name="Click the radio button &quot;Mobile Number&quot;" library="login_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211007 12:21:01.425" level="INFO">Opening url 'https://web-stage.voxy.com/v2/#/login/'</msg>
+<status status="PASS" starttime="20211007 12:21:01.424" endtime="20211007 12:21:07.135"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="login_form_field_phone"]/label/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211007 12:21:07.138" level="INFO">Clicking element 'xpath=//*[@id="login_form_field_phone"]/label/i'.</msg>
+<status status="PASS" starttime="20211007 12:21:07.137" endtime="20211007 12:21:09.483"/>
+</kw>
+<status status="PASS" starttime="20211007 12:21:01.423" endtime="20211007 12:21:09.483"/>
+</kw>
+<kw name="Insert the number 800-444-4444" library="login_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="voxy-login"]//div//div/form//div[2]/div/div/input</arg>
+<arg>${inumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211007 12:21:09.487" level="INFO">Typing text '800-444-4444' into text field 'xpath=//*[@id="voxy-login"]//div//div/form//div[2]/div/div/input'.</msg>
+<status status="PASS" starttime="20211007 12:21:09.486" endtime="20211007 12:21:12.619"/>
+</kw>
+<status status="PASS" starttime="20211007 12:21:09.485" endtime="20211007 12:21:12.620"/>
+</kw>
+<kw name="Click the &quot;Continue&quot; button" library="login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="login_form_submit_button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211007 12:21:12.625" level="INFO">Clicking button 'xpath=//*[@id="login_form_submit_button"]'.</msg>
+<status status="PASS" starttime="20211007 12:21:12.623" endtime="20211007 12:21:17.996"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211007 12:21:17.996" endtime="20211007 12:21:17.996"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="modals-container"]/div/div/div[2]/div</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211007 12:21:17.997" endtime="20211007 12:21:20.044"/>
+</kw>
+<status status="PASS" starttime="20211007 12:21:12.622" endtime="20211007 12:21:20.044"/>
+</kw>
+<kw name="Click the &quot;Try again&quot; button" library="login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="modals-container"]/div//div[2]//div[2]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211007 12:21:20.046" level="INFO">Clicking button 'xpath=//*[@id="modals-container"]/div//div[2]//div[2]/button'.</msg>
+<status status="PASS" starttime="20211007 12:21:20.045" endtime="20211007 12:21:25.370"/>
+</kw>
+<status status="PASS" starttime="20211007 12:21:20.045" endtime="20211007 12:21:25.370"/>
+</kw>
+<status status="PASS" starttime="20211007 12:20:54.579" endtime="20211007 12:21:25.372"/>
+</test>
+<status status="PASS" starttime="20211007 12:20:29.407" endtime="20211007 12:21:25.377"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
