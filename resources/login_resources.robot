@@ -4,6 +4,7 @@ Library     SeleniumLibrary
 
 *** Variables ***
 ${email}    gibberish@gmail.com
+${exemail}  test@email.com
 ${url}      https://web-stage.voxy.com/v2/#/login/
 ${inumber}  800-444-4444
 
@@ -15,7 +16,8 @@ Open test
 Close Test
     Close Browser
 
-Scenario 01: Invalid email verification
+#Scenario 01: Invalid email verification
+
 Fill in the field "email" with a non-existing email account
     Go To    ${url}
     Input Text    xpath=//*[@id="login_form_email_input_field"]   ${email}
@@ -28,7 +30,9 @@ Click the button "Continue"
 Click "Try again"
     Click Button    xpath=//*[@id="modals-container"]/div//div[2]//div[2]/button
 
-Scenario 02: Invalid number verification
+
+#Scenario 02: Invalid number verification
+
 Click the radio button "Mobile Number"
     Go To               ${url}
     Click Element       xpath=//*[@id="login_form_field_phone"]/label/i
@@ -43,3 +47,18 @@ Click the "Continue" button
 
 Click the "Try again" button
     Click Button    xpath=//*[@id="modals-container"]/div//div[2]//div[2]/button
+
+#Scenario 03: Verify if email account is expired (email)
+
+Fill in the field "email" with an expired email (ex: test@email.com)
+     Go To    ${url}
+     Input Text    xpath=//*[@id="login_form_email_input_field"]   ${exemail}
+
+
+ Click "Continue"
+      Click Button  xpath=//*[@id="login_form_submit_button"]
+      Set Selenium Speed    1 seconds
+      Wait Until Element Is Visible    xpath=//*[@id="modals-container"]/div/div/div[2]/div
+
+ Click "Back to login"
+      Click Button    xpath=//*[@id="modals-container"]/div/div/div[2]/div/div[2]/button
