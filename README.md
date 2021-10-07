@@ -73,4 +73,10 @@ Now, with everything installed, simply go to your IDE terminal and run the comma
 
 ## Why the test cases were chosen
 
+Scenario 01: Invalid email verification: This was chosen first because it is critical for the user to have a feedback on whether or not the input is valid. For example, if the user has more than one email, and accidentally uses one that does not have an account in the Voxy platform, how will they be informed of that? It is necessary first and foremost to validate this.
+
+Scenario 02: Invalid number verification: Same logic as scenario 01. The system has to check if the account exists or not, and it has to inform the user of that.
+
+Scenario 03: Verify if email account is expired (email): This case was found by chance, testing different data in the system. Once found, I've noticed that there is a different verification, in which validates if the user account expired. Also very valuable, because, assuming this is a business rule, accounts are not deleted, only inactivated, so informing the user to contact support in order to be able to access this account again should also be included.
+
 
