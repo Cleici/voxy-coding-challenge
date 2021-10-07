@@ -29,8 +29,19 @@ This document covers functional test cases for the https://web-stage.voxy.com/v2
 3 | Click the button "Continue" | A modal must open, informing the user that it wasnt possible to find the account with the button "Try again" enabled
 4 | Click the "Try again" button | The modal closes and the email option is selected
 
+## Scenario 03: Verify if email account is expired (email)
+### Preconditions:
 
-## Scenario 03: Invalid email format verifications
+* Inactive account (either email or phone number).
+
+**Step** | **Description** | **Expected result**
+-------- | --------------- | -------------------
+1 | Fill in the field "email" with an expired email (ex: test@email.com)  | Field is filled in accordingly 
+2 | Click the button "Continue" | A modal must open, informing the user that the account is expired with the button "Back to login" enabled
+3 | Click "Back to login" | The modal closes and the field "email" is cleared
+
+
+## Scenario 04: Invalid email format verifications
 ### Preconditions: 
 
 * None.
@@ -43,7 +54,7 @@ This document covers functional test cases for the https://web-stage.voxy.com/v2
 4 | Clear field | Field "email" is cleared
 5 | Input only space in the "email" field" | "Continue" button must be disabled and the field must be highlighted in red
 
-## Scenario 04: Invalid number format verifications
+## Scenario 05: Invalid number format verifications
 ### Preconditions:
 
 * US number format;
@@ -55,14 +66,3 @@ This document covers functional test cases for the https://web-stage.voxy.com/v2
 2 | Click the outside of the mobile number |  Field must be highlighted in red
 3 | Insert more than 10 characters in the mobile number field | "Continue" button must be disabled and the field must be highlighted in red
 
-
-## Scenario 05: Verify if email account is expired (email)
-### Preconditions:
-
-* Inactive account (either email or phone number).
-
-**Step** | **Description** | **Expected result**
--------- | --------------- | -------------------
-1 | Fill in the field "email" with an expired email (ex: test@email.com)  | Field is filled in accordingly 
-2 | Click the button "Continue" | A modal must open, informing the user that the account is expired with the button "Back to login" enabled
-3 | Click "Back to login" | The modal closes and the field "email" is cleared
