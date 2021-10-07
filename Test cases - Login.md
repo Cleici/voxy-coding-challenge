@@ -26,7 +26,7 @@ This document covers functional test cases for the https://web-stage.voxy.com/v2
 -------- | --------------- | -------------------
 1 | Click the radio button "Mobile Number" | Page should display input field that only accepts numbers and the United States flag is automatically selected
 2 | Insert the number 800-444-4444 | Number is filled in the input field
-3 | Click the button "Continue" | A modal must open, informing the user that it wasnt possible to find the account with the button "Try again" enabled
+3 | Click "Continue" | A modal must open, informing the user that it wasnt possible to find the account with the button "Try again" enabled
 4 | Click the "Try again" button | The modal closes and the email option is selected
 
 ## Scenario 03: Verify if email account is expired (email)
