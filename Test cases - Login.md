@@ -5,7 +5,9 @@ This document covers functional test cases for the https://web-stage.voxy.com/v2
 
 
 ## Scenario 01: Invalid email verification
-### Preconditions: invalid email account (ex: gibberish372@gmail.com).
+### Preconditions:
+
+* Invalid email account (ex: gibberish372@gmail.com).
 
 **Step** | **Description** | **Expected result**
 -------- | --------------- | -------------------
@@ -29,7 +31,9 @@ This document covers functional test cases for the https://web-stage.voxy.com/v2
 
 
 ## Scenario 03: Invalid email format verifications
-### Preconditions: none.
+### Preconditions: 
+
+* None.
 
 **Step** | **Description** | **Expected result**
 -------- | --------------- | -------------------
@@ -50,3 +54,15 @@ This document covers functional test cases for the https://web-stage.voxy.com/v2
 2 | Insert letters in the mobile number input field | "Continue" button must be disabled
 2 | Click the outside of the mobile number |  Field must be highlighted in red
 3 | Insert more than 10 characters in the mobile number field | "Continue" button must be disabled and the field must be highlighted in red
+
+
+## Scenario 05: Verify if email account is expired (email)
+### Preconditions:
+
+* Inactive account (either email or phone number).
+
+**Step** | **Description** | **Expected result**
+-------- | --------------- | -------------------
+1 | Fill in the field "email" with an expired email (ex: test@email.com)  | Field is filled in accordingly 
+2 | Click the button "Continue" | A modal must open, informing the user that the account is expired with the button "Back to login" enabled
+3 | Click "Back to login" | The modal closes and the field "email" is cleared
