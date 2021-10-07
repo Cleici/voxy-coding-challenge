@@ -14,6 +14,7 @@ This document will guide the user on how to run the automated tests for the Voxy
 * Test cases
 * How to run automated tests
 * Why the test cases were chosen
+* Troubleshooting
 
 
 
@@ -22,7 +23,6 @@ This document will guide the user on how to run the automated tests for the Voxy
 
 * Latest version of Python : hhttps://www.python.org/downloads/
 * Robot Framework: https://robotframework.org/#introduction
-* Latest version of Gecko Driver: https://github.com/mozilla/geckodriver/releases
 * Atom https://atom.io/
 
 ## How to install
@@ -41,12 +41,6 @@ In order to install robot, first you need to have the latest version of python i
 * The cmd will inform that robot was installed successfully.
 * Now, still on the cmd, run the command ```pip install --upgrade robotframework-seleniumlibrary``` to install the Selenium library, in order for robot to use it's keywords.
 
-### Geckodriver
-
-* Go to https://github.com/mozilla/geckodriver/releases
-* Click "Latest release";
-* Download said release;
-* The zip file will be located in your download folder. Unzip it and paste in the folder "script" where python was installed usually, the path to windows is: ```C:\Python38\Scripts``` it depends on where the python folder is installed.
 
 ### Atom
 
@@ -69,7 +63,9 @@ The tests cases developed for this challenge can be found on https://github.com/
 
 ## How to run automated tests
 
-Now, with everything installed, simply go to your IDE terminal and run the command ```robot -d ./results .\test_suite\login.robot``` and the test suite will run the test cases enclosed in the file login.robot.
+Now, with everything installed, simply go to your IDE terminal in the project directory and run the command ```robot -d ./results .\test_suite\login.robot``` and the test suite will run the test cases enclosed in the file login.robot. It should look like this:
+
+```C:\Users\userName\github\voxy-coding-challenge> robot -d ./results .\test_suite\login.robot```
 
 ## Why the test cases were chosen
 
@@ -88,3 +84,17 @@ This case was found by chance, testing different data in the system. Once found,
 
 **Scenario 05: Invalid number format verifications** - The same applies for this case. Although, here in this case we have one more rule, that includes the country code that is going to be used. So is important to understand the format and validate them, according to the country and following metrics to avoid bad data.
 
+
+## Troubleshooting 
+
+If you are having problems running the test and the following error appeared:
+
+WebdriverException: Message:
+'geckodriver' executable needs to be in PATH.
+
+You must follow the steps:
+
+* Go to https://github.com/mozilla/geckodriver/releases
+* Click "Latest release";
+* Download said release;
+* The zip file will be located in your download folder. Unzip it and paste in the folder "Scripts" where python was installed usually, the path to windows is: ```C:\Python38\Scripts``` it depends on where the python folder is installed.
