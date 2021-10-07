@@ -9,7 +9,6 @@ This document will guide the user on how to run the automated tests for the Voxy
 * How to install
   * Python
   * Robot Framework
-  * Geckodriver
   * Atom
 * Test cases
 * How to run automated tests
@@ -21,15 +20,15 @@ This document will guide the user on how to run the automated tests for the Voxy
 
 ## Tools used
 
-* Latest version of Python : hhttps://www.python.org/downloads/
-* Robot Framework: https://robotframework.org/#introduction
-* Atom https://atom.io/
+* Latest version of Python : [link](https://www.python.org/downloads/)
+* Robot Framework: [link](https://robotframework.org/#introduction)
+* Atom: [link](https://atom.io/)
 
 ## How to install
 
 ### Python
 
-Go to https://www.python.org/downloads/
+Go to [Python.org](https://www.python.org/downloads/)
 Click "download" on the latest version listed
 Download said version, according to your OS.
 
@@ -46,8 +45,8 @@ In order to install robot, first you need to have the latest version of python i
 
 The code editor or IDE can be of your choice. What was used to develop these tests was atom.
 
-* In order to install it, go to https://atom.io/;
-* Then, to clone the repository go to https://github.com/Cleici/voxy-coding-challenge;
+* In order to install it, go to [Atom](https://atom.io/);
+* Then, to clone the repository go to the [voxy challenge repository](https://github.com/Cleici/voxy-coding-challenge);
 * Click the button "Code"
 * Copy the HTTPS code
 * Go to your IDE and clone the project. With atom, click on "Welcome guide" tab
@@ -59,7 +58,7 @@ The code editor or IDE can be of your choice. What was used to develop these tes
 
 ## Test cases
 
-The tests cases developed for this challenge can be found on https://github.com/Cleici/voxy-coding-challenge/blob/main/Test%20cases%20-%20Login.md
+The tests cases developed for this challenge can be found in the [**test cases page**](https://github.com/Cleici/voxy-coding-challenge/blob/main/Test%20cases%20-%20Login.md)
 
 ## How to run automated tests
 
@@ -94,7 +93,7 @@ WebdriverException: Message:
 
 You must follow the steps:
 
-* Go to https://github.com/mozilla/geckodriver/releases
+* Go to [Geckodriver](https://github.com/mozilla/geckodriver/releases)
 * Click "Latest release";
 * Download said release;
 * The zip file will be located in your download folder. Unzip it and paste in the folder "Scripts" where python was installed usually, the path to windows is: ```C:\Python38\Scripts``` it depends on where the python folder is installed.
