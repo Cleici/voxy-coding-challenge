@@ -1,0 +1,8 @@
+1633623202179	geckodriver	INFO	Listening on 127.0.0.1:61083
+1633623205259	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\cleic\\AppData\\Local\\Temp\\rust_mozprofile4zGJ0z"
+1633623205868	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\cleic\\AppData\\Local\\Temp\\rust_mozprofile4zGJ0z\\search.json.mozlz4", (void 0)))
+1633623210161	Marionette	INFO	Listening on port 61091
+1633623210664	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://web-stage.voxy.com/v2/static/js/app.129e7e680c9ecc4f8ae9.js?ed9d0dad82902af7971c, line 101: Error: Bad Gateway
+1633623294319	Marionette	INFO	Stopped listening on port 61091
