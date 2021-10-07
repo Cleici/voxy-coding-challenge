@@ -1,0 +1,21 @@
+1633630854809	geckodriver	INFO	Listening on 127.0.0.1:62271
+1633630857873	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\cleic\\AppData\\Local\\Temp\\rust_mozprofile4uWde7"
+1633630858426	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\cleic\\AppData\\Local\\Temp\\rust_mozprofile4uWde7\\search.json.mozlz4", (void 0)))
+1633630861244	Marionette	INFO	Listening on port 61671
+1633630861621	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1633630884937	Marionette	INFO	Stopped listening on port 61671
+JavaScript error: resource:///modules/Interactions.jsm, line 230: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x390077,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\cleic\AppData\Local\Temp\rust_mozprofile4uWde7\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
